@@ -46,16 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
-     <Compile Include="Assets\Scripts\changeMusic.cs" />
-     <Compile Include="Assets\Scripts\dontDistroy.cs" />
-     <Compile Include="Assets\Scripts\loadAdditive.cs" />
-     <Compile Include="Assets\_Scripts\CameraController.cs" />
-     <Compile Include="Assets\_Scripts\Scene0Script\PlayerController.cs" />
-     <Compile Include="Assets\_Scripts\Scene0Script\PlayerControllerManagerScript.cs" />
-     <Compile Include="Assets\_Scripts\Scene1Script\PlayerController1.cs" />
-     <Compile Include="Assets\_Scripts\Scene2Script\InputManagerScript.cs" />
-     <Compile Include="Assets\_Scripts\Scene2Script\PlayerController2.cs" />
+     <Compile Include="Assets\Main_Script\LoadOnClick.cs" />
+     <Compile Include="Assets\Main_Script\changeMusic.cs" />
+     <Compile Include="Assets\Main_Script\dontDistroy.cs" />
+     <Compile Include="Assets\Main_Script\loadAdditive.cs" />
+     <Compile Include="Assets\Player_Scripts\CameraController.cs" />
+     <Compile Include="Assets\Player_Scripts\Scene0Script\PlayerController.cs" />
+     <Compile Include="Assets\Player_Scripts\Scene0Script\PlayerControllerManagerScript.cs" />
+     <Compile Include="Assets\Player_Scripts\Scene1Script\PlayerController1.cs" />
+     <Compile Include="Assets\Player_Scripts\Scene2Script\InputManagerScript.cs" />
+     <Compile Include="Assets\Player_Scripts\Scene2Script\PlayerController2.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
