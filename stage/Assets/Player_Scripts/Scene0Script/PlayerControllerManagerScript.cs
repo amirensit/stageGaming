@@ -33,7 +33,7 @@ public class PlayerControllerManagerScript : MonoBehaviour {
     {
         playerController.moveLeft = false;
         playerController.moveRight = false;
-        //playerController.rb.velocity = playerController.transform.forward;
+        
         
     }
 

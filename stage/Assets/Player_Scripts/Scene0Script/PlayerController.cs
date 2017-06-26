@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody rb;
     public bool moveRight;
     public bool moveLeft;
-    Vector3 v1, v2, v3;
+    public float x = 5;
     public float speed;
     
     
    
-    // Use this for initialization
+    
     void Start () {
 
        
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
         if (moveLeft == true) { MoveLeft(); }
         else if(moveRight==true) { MoveRight();  }
         else if( moveRight == true && moveLeft == true ) return;
+        Debug.Log(  transform.rotation.eulerAngles.y   );
     }
 
 
@@ -38,11 +39,11 @@ public class PlayerController : MonoBehaviour {
     public void MoveLeft()
     {
         transform.Rotate(new Vector3(0, 10, 0) * Time.deltaTime);
-       
-        
-        
-        
-       
+
+
+        if (Mathf.Abs(transform.rotation.eulerAngles.y) > 60f) return;
+
+
     }
 
 
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour {
     public void MoveRight()
     {
         transform.Rotate(new Vector3(0, -10, 0) * Time.deltaTime);
-       
+        if (Mathf.Abs(transform.rotation.eulerAngles.y) > 60f) return;
 
 
     }
