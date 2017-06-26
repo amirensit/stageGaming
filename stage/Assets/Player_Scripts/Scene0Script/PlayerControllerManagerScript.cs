@@ -5,45 +5,36 @@ using UnityEngine;
 public class PlayerControllerManagerScript : MonoBehaviour {
 
 
-    public GameObject playerController;
-    Rigidbody rb;
-    Vector3 v1, v2, v3;
+    public PlayerController playerController;
 
-	// Use this for initialization
-	void Start () {
-        rb = playerController.GetComponent<Rigidbody>();
-        v1= new Vector3(0, 0, 5);
-        v2 = new Vector3(-5, 0, 5);
-        v3 = new Vector3(5, 0, 5);
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    Vector3  v1= new Vector3(0, 0, 2);
+
+
+
+
 
 
 
     public void MoveLeft()
     {
-        rb.velocity = v2;
+        playerController.moveRight = false;
+        playerController.moveLeft = true;
     }
 
 
 
     public void MoveRight()
     {
-        rb.velocity = v3;
+        playerController.moveLeft = false;
+        playerController.moveRight = true;
     }
 
-
-
-
-
-    public void SetInitialVelocity()
+    public void initialize()
     {
-        rb.velocity = v1;
-
+        playerController.moveLeft = false;
+        playerController.moveRight = false;
+        //playerController.rb.velocity = playerController.transform.forward;
+        
     }
 
 

@@ -5,24 +5,19 @@ using UnityEngine;
 public class PlayerController1 : MonoBehaviour {
 
 
-     Rigidbody rb;
-    public int  speed;
-    float x;
-	// Use this for initialization
-	void Start () {
-
-        rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0, 0, 5);
-
-    }
+   
+    public float  speed;
+    float r;
+    Vector3 v;
 	
 
     void FixedUpdate()
     {
-        x = Input.acceleration.x * Time.deltaTime * speed;
-        
-        
-        transform.Translate(x, 0, 0);
+        transform.Translate(transform.forward * Time.deltaTime * speed);
+        r = Input.acceleration.x * Time.deltaTime * speed;
+        v = new Vector3(0, r, 0);
+        transform.Rotate(v * Time.deltaTime);
+       
 
     }
 
